@@ -1,5 +1,5 @@
 # http://nginx.org/download/nginx-1.5.10.tar.gz
-FROM ubuntu:raring
+FROM ubuntu:latest
 
 MAINTAINER Alexandr Razumov ernado@ya.ru
 
