@@ -13,7 +13,7 @@ RUN unzip release-${NPS_VERSION}-beta.zip
 RUN cd /ngx_pagespeed* && wget https://dl.google.com/dl/page-speed/psol/${NPS_VERSION}.tar.gz && tar -xzvf ${NPS_VERSION}.tar.gz
 
 WORKDIR /
-ENV NGINX_VER 1.7.2
+ENV NGINX_VER 1.7.3
 RUN wget http://nginx.org/download/nginx-$NGINX_VER.tar.gz -nv
 RUN tar -xf nginx-$NGINX_VER.tar.gz && rm nginx-$NGINX_VER.tar.gz
 RUN cd nginx-$NGINX_VER && ./configure --add-module=/ngx_pagespeed-release-${NPS_VERSION}-beta --with-http_spdy_module --with-http_ssl_module && make -j $(nproc) -s && make install
